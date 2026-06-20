@@ -7,7 +7,7 @@
 
 ## Цветовая палитра
 
-> _Референсы добавляются_
+- [color-palette-table-tennis.md](color-palette-table-tennis.md) — официальные цвета ITTF: стол, мяч, накладки, пол, ограждения (Butterfly, JOOLA, Stiga)
 
 ---
 
