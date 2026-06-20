@@ -125,7 +125,7 @@ function buildHTML() {
 (async () => {
   const html = buildHTML();
   const htmlPath = path.join(__dirname, '_palette-temp.html');
-  const pdfPath = path.join(__dirname, 'color-palette-table-tennis.pdf');
+  const pdfPath = path.join(__dirname, '..', 'table-tennis', 'color-palette.pdf');
 
   fs.writeFileSync(htmlPath, html, 'utf8');
 
