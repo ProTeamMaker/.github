@@ -10,7 +10,7 @@ if (!sport) {
   process.exit(1);
 }
 
-const dataPath = path.join(__dirname, '..', sport, 'palette-data.json');
+const dataPath = path.join(__dirname, '..', sport, 'data', 'palette-data.json');
 
 if (!fs.existsSync(dataPath)) {
   console.error(`File not found: ${dataPath}`);
