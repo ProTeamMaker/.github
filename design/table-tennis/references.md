@@ -8,6 +8,7 @@
 ## Цветовая палитра
 
 - [color-palette.md](color-palette.md) — официальные цвета ITTF: стол, мяч, накладки, пол, ограждения (Butterfly, JOOLA, Stiga)
+- [base-color-palette.md](base-color-palette.md) — три варианта базовой UI-палитры приложения (фон / карточки / акцент / текст) · [PDF](base-color-palette.pdf)
 
 ---
 

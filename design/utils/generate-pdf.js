@@ -3,14 +3,17 @@ const fs = require('fs');
 const path = require('path');
 
 const sport = process.argv[2];
+const dataFile = process.argv[3] || 'palette-data';
+const outputName = process.argv[4] || 'color-palette';
 
 if (!sport) {
-  console.error('Usage: node utils/generate-pdf.js <sport-folder>');
+  console.error('Usage: node utils/generate-pdf.js <sport-folder> [data-file] [output-name]');
   console.error('Example: node utils/generate-pdf.js table-tennis');
+  console.error('Example: node utils/generate-pdf.js table-tennis base-palette-data base-color-palette');
   process.exit(1);
 }
 
-const dataPath = path.join(__dirname, '..', sport, 'data', 'palette-data.json');
+const dataPath = path.join(__dirname, '..', sport, 'data', `${dataFile}.json`);
 
 if (!fs.existsSync(dataPath)) {
   console.error(`File not found: ${dataPath}`);
@@ -83,7 +86,7 @@ function buildHTML() {
 (async () => {
   const html = buildHTML();
   const htmlPath = path.join(__dirname, '_temp.html');
-  const pdfPath = path.join(__dirname, '..', sport, 'color-palette.pdf');
+  const pdfPath = path.join(__dirname, '..', sport, `${outputName}.pdf`);
 
   fs.writeFileSync(htmlPath, html, 'utf8');
 
